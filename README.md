@@ -1,27 +1,79 @@
-# Blogs
+# Coding Blogs — Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
+A web application for publishing, reading, and exploring programming-related articles. Coding Blogs aims to provide developers with a place to share technical knowledge, discover tutorials, and learn about software development.
 
-## Development server
+## ✨ Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- 📝 Browse and read technical blog posts
+- 🔍 Discover programming-related content
+- 📚 Explore articles by topic or category, if supported
+- ✍️ Create and manage blog posts, if supported
+- 👤 User authentication and profile management, if supported
+- 📱 Responsive interface for desktop and mobile devices
 
-## Code scaffolding
+## 🛠️ Tech Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Frontend:** Angular 16
+- **Language:** TypeScript
+- **Styling:** SCSS, Tailwind
+- **API Integration:** REST API
+- **Package Manager:** npm
 
-## Build
+## 🚀 Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
 
-## Running unit tests
+- Node.js
+- npm
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Installation
 
-## Running end-to-end tests
+```bash
+git clone https://github.com/fsd-freelancers/codingBlogs.git
+cd codingBlogs
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Configuration
 
-## Further help
+Configure the backend API URL using the environment configuration supported by your frontend.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Example:
+
+```env
+API_BASE_URL=http://localhost:3000
+```
+
+### Run the Application
+
+Use the development command defined in your `package.json`. For example:
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+## 🔗 Backend Integration
+
+The frontend communicates with the backend API to retrieve or manage blog content and other application data supported by the project.
+
+Ensure that the API URL, authentication configuration, and CORS settings match the backend.
+
+## 🔒 Security
+
+- Validate user inputs.
+- Handle API errors appropriately.
+- Keep private credentials out of frontend code.
+- Use secure authentication and authorization flows where applicable.
+
+- GitHub: [fsd-freelancers](https://github.com/fsd-freelancers)
+- Repository: [codingBlogs](https://github.com/fsd-freelancers/codingBlogs)
+
+---
+
+Built for developers who enjoy sharing knowledge.
