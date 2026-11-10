@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { BlogService } from 'src/app/modules/blogs/services/blog.service';
 import { ScrollService } from 'src/app/shared/services/scroll.service';
 import { SharedService } from 'src/app/shared/services/shared.service';
+import { homepageData } from './home-page-data';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,7 @@ export class HomeComponent {
   private subscriptionBackend: Subscription;
   private subscriptionFullstack: Subscription;
 
-  public blogs: any;
+  public blogs: any = homepageData;
   public isLoading: boolean = false;
 
   constructor(private scrollService: ScrollService, private _blogService: BlogService, public _sharedService: SharedService) {
@@ -54,7 +55,7 @@ export class HomeComponent {
   }
 
   private getBlogs() {
-    this.isLoading = true;
+    // this.isLoading = true;
     this._blogService.getBlogs().subscribe(res => {
       this.blogs = res;
       this.isLoading = false;
