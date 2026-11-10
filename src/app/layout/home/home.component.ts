@@ -24,7 +24,8 @@ export class HomeComponent {
   private subscriptionBackend: Subscription;
   private subscriptionFullstack: Subscription;
 
-  public blogs: any = homepageData;
+  // public blogs: any = homepageData;
+  public blogs: any;
   public isLoading: boolean = false;
 
   constructor(private scrollService: ScrollService, private _blogService: BlogService, public _sharedService: SharedService) {
@@ -55,7 +56,7 @@ export class HomeComponent {
   }
 
   private getBlogs() {
-    // this.isLoading = true;
+    this.isLoading = true;
     this._blogService.getBlogs().subscribe(res => {
       this.blogs = res;
       this.isLoading = false;
